@@ -81,27 +81,27 @@ const ReducerCounterPage: React.FC = () => {
   };
 
   return (
-    <Panel className='p-3 border-b mt-3 '>
-      <h4 className='text-center mb-5'>Count is : {state.count}</h4>
-      <div className='flex flex-row justify-center'>
-        <Buttons color='primary' type='outline' onClick={handleincrement}>
+    <Panel className="p-3 border-b mt-3 ">
+      <h4 className="text-center mb-5">Count is : {state.count}</h4>
+      <div className="flex flex-row justify-center">
+        <Buttons color="primary" type="outline" onClick={handleincrement}>
           Increament
         </Buttons>
-        <Buttons color='warning' type='outline' onClick={handledecrement}>
+        <Buttons color="warning" type="outline" onClick={handledecrement}>
           Decrement
         </Buttons>
 
-        <form className='form mt-2' onSubmit={handleSubmit}>
+        <form className="form mt-2" onSubmit={handleSubmit}>
           <input
-            type='number'
-            className='border border-gray-500 py-1 '
+            type="number"
+            className="border border-gray-500 py-1 "
             onChange={handleChange}
             value={state.valueToadd || ""}
           />
-          <Buttons type='outline' color='primary'>
+          <Buttons type="outline" color="primary">
             Add
           </Buttons>
-          <Buttons type='outline' color='secondary' onClick={handleRest}>
+          <Buttons type="outline" color="secondary" onClick={handleRest}>
             reset
           </Buttons>
         </form>
