@@ -47,6 +47,16 @@ const Navbar = () => {
           >
             UI Elements
           </Link>
+          <Link
+            to={"/slice-example"}
+            className={`${
+              location.pathname === "/slice-example"
+                ? "text-white"
+                : "text-teal-200"
+            } block mt-4 lg:inline-block lg:mt-0  hover:text-white mr-4`}
+          >
+            Slice Example 1
+          </Link>
         </div>
         <div></div>
       </div>
