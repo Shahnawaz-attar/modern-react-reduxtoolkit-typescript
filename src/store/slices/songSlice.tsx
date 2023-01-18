@@ -1,4 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { reset } from "../actions/songsAction";
 
 interface Song {
   id: string;
@@ -13,22 +14,26 @@ const initialState: SongState = {
   songs: [
     {
       id: "1",
-      title: "any",
+      title: "Song title ",
     },
   ],
 };
 
 const songsSlice = createSlice({
-  name: "song",
-  initialState: initialState,
+  name: "songs",
+  initialState,
   reducers: {
-    addSong: (state: any, action: PayloadAction<Song>) => {
-      state.songs.push(action.payload);
+    addSong: (state, action: PayloadAction<Song>) => {
+      state.songs = [...state.songs, action.payload];
     },
-    removeSong: (state: any, action: PayloadAction<Song>) => {
-      const index = state.songs.indexOf(action.payload);
-      state.songs.splice(index, 1);
+    removeSong: (state, action: PayloadAction<Song>) => {
+      state.songs = state.songs.filter(song => song.id !== action.payload.id);
     },
+  },
+  extraReducers(builder) {
+    builder.addCase(reset, (state, action) => {
+      state.songs = [];
+    });
   },
 });
 
