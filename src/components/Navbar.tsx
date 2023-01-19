@@ -57,6 +57,16 @@ const Navbar = () => {
           >
             Slice Example 1
           </Link>
+          <Link
+            to={"/redux-form-example"}
+            className={`${
+              location.pathname === "/redux-form-example"
+                ? "text-white"
+                : "text-teal-200"
+            } block mt-4 lg:inline-block lg:mt-0  hover:text-white mr-4`}
+          >
+            Redux Form Example
+          </Link>
         </div>
         <div></div>
       </div>
