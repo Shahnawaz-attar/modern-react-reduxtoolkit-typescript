@@ -14,9 +14,7 @@ const ReduxForm = () => {
           </Panel>
         </div>
         <div className='col-start-4 col-end-6   ...'>
-          <Panel>
-            <CarForm />
-          </Panel>
+          <CarList />
         </div>
       </div>
     </div>
