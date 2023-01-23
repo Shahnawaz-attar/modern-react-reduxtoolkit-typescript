@@ -9,6 +9,7 @@ interface FormState {
 const initialState: FormState = {
   name: "",
   cost: 0,
+  
 };
 
 const formSlicer = createSlice({
