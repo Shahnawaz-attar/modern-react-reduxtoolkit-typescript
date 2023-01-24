@@ -7,16 +7,20 @@ import {
   removeCar,
   changeSearchTerm,
 } from "./slices/carSlice";
+import { userReducer, UsersState } from "./slices/userSlices";
 
 const store = configureStore({
   reducer: {
     song: songReducer,
     form: formReducer,
     car: carReducer,
+    user: userReducer,
   },
 });
 
 export type RootState = ReturnType<typeof store.getState>;
+export type AppDispatch = typeof store.dispatch;
+
 export const { dispatch } = store;
 export {
   store,
@@ -28,3 +32,6 @@ export {
   removeCar,
   changeSearchTerm,
 };
+
+export * from "./thunks/userThunk";
+export * from "./thunks/fetchUser";

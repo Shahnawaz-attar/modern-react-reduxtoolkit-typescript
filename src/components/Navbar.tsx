@@ -67,6 +67,16 @@ const Navbar = () => {
           >
             Redux Form Example
           </Link>
+          <Link
+            to={"/redux-query-example"}
+            className={`${
+              location.pathname === "/redux-query-example"
+                ? "text-white"
+                : "text-teal-200"
+            } block mt-4 lg:inline-block lg:mt-0  hover:text-white mr-4`}
+          >
+            Redux Query Example
+          </Link>
         </div>
         <div></div>
       </div>
